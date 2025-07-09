@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Gantt Chart Styles */
+.gantt-chart {
+    min-height: 100px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    position: relative;
+}
+
+.gantt-block {
+    display: inline-block;
+    height: 40px;
+    margin: 5px 2px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.gantt-block:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.gantt-time {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Process Table Styles */
+.table th {
+    background-color: #f8f9fa;
+}
+
+/* Input Styles */
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    border-color: #80bdff;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Animation for Gantt Chart */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gantt-block {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .gantt-chart {
+        overflow-x: auto;
+    }
+    
+    .table-responsive {
+        margin-bottom: 0;
+    }
+}
+
+/* Process Colors */
+.process-color-1 { background-color: #007bff; }
+.process-color-2 { background-color: #28a745; }
+.process-color-3 { background-color: #dc3545; }
+.process-color-4 { background-color: #ffc107; }
+.process-color-5 { background-color: #17a2b8; }
+.process-color-6 { background-color: #6f42c1; }
+.process-color-7 { background-color: #fd7e14; }
+.process-color-8 { background-color: #20c997; }
+
+/* Metrics Table Styles */
+#metricsTable td {
+    vertical-align: middle;
+}
+
+#averageMetrics {
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* Tooltip Styles */
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    z-index: 1000;
+} 
